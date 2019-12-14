@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'roboto';
+	src: url('../../fonts/roboto/Roboto-Medium.ttf');
+	font-style: normal;
+	font-weight: 300;
+}
+
+.bgNavbar {
+	background: linear-gradient(to right, rgba(0, 126, 239, 0.97), #00aeef);
+	padding: 0.5rem 27.5rem;
+}
+
+.nav-link {
+	font-size: 14px;
+	color: whitesmoke;
+	font-family: roboto;
+	font-weight: 300;
+}
+
+.nav-link:hover {
+	color: whitesmoke;
+}
+
+.pHead {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.pDesc {
+	font-size: 14px;
+	font-weight: 300;
+    padding: 0;
+    font-weight: normal;
+	margin: 0;
+}
+
+.findHotel{
+    margin-top: -3.1rem;
+    border-bottom:1px solid #ccc ;
+    padding: 15px;
+}
+
+.btnHotel {
+	background: white;
+    color: rgb(65, 63, 63);
+    margin-left: 23%;
+    font-family: roboto;
+    font-size: 13px;
+    padding: .7rem 7rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.descLocation{
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+}
+
+.inputLocation{
+    border: none;
+}
+
+.dataInput input[type=text]{
+    width: 650px;
+    height: 20px;
+    outline: none;
+}
+
+.inputData{
+    margin-left: 23%;
+}
+
+.bordering{
+    position: absolute;
+    width: 1px;
+    height: 66px;
+    background: #ccc;
+    left: 60%;
+    top:48.2%;
+}
+
+.findBtn{
+    position: absolute;
+    left: 60%;
+    top: 49.75%;
+    padding: .45rem 6rem;
+    background: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.headerLine{
+    width: 140px;
+    height: 2px;
+    background: #00aeff;
+}
+
+.topCity img:hover::after{
+    content: 'lala';
+    width: inherit;
+    height: inherit;
+    background: rgba(0, 0, 0, 0.9);
+}
