@@ -8,6 +8,7 @@
         {
             $this->load->view('templateUser/header');
             $this->load->view('user/home/home');
+            $this->load->view('user/home/footer');
             $this->load->view('templateUser/footer');
         }
     

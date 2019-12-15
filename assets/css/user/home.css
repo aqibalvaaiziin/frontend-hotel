@@ -1,109 +1,133 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+
 @font-face {
-	font-family: 'roboto';
+	font-family: roboto;
+	src: url('../../fonts/roboto/Roboto-Light.ttf');
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: roboto;
 	src: url('../../fonts/roboto/Roboto-Medium.ttf');
 	font-style: normal;
 	font-weight: 300;
 }
 
-.bgNavbar {
-	background: linear-gradient(to right, rgba(0, 126, 239, 0.97), #00aeef);
-	padding: 0.5rem 27.5rem;
+@font-face {
+	font-family: rubik;
+	src: url('../../fonts/rubik/Rubik-Light.ttf');
+	font-style: normal;
+	font-weight: 100;
 }
 
-.nav-link {
-	font-size: 14px;
-	color: whitesmoke;
+@font-face {
+	font-family: rubik;
+	src: url('../../fonts/rubik/Rubik-Medium.ttf');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: pfd;
+	src: url('../../fonts/playfair-display/PlayfairDisplay-Regular.otf');
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: pfd;
+	src: url('../../fonts/playfair-display/PlayfairDisplay-Black.otf');
+	font-style: normal;
+	font-weight: 400;
+}
+
+.robotoMedium {
 	font-family: roboto;
 	font-weight: 300;
 }
 
+.robotoLight {
+	font-family: roboto;
+	font-weight: 100;
+}
+
+.rubikLight {
+	font-family: rubik;
+	font-weight: 100;
+}
+
+.rubikMedium {
+	font-family: rubik;
+	font-weight: 400;
+}
+
+.pdfMedium {
+	font-family: pdf;
+	font-weight: 400;
+}
+
+.pdfLight {
+	font-family: pdf;
+	font-weight: 200;
+}
+
+.navbar {
+	width: 75%;
+	left: 15%;
+	color: white;
+}
+
+nav{
+	background: none;
+}
+
+.nav-link {
+	color: white;
+	font-family: rubik;
+	font-weight: 100;
+}
+
+.navbar-brand{
+	font-family: rubik;
+	font-weight: 400;
+}
+
 .nav-link:hover {
-	color: whitesmoke;
+	color: rgba(255, 255, 255, 0.5);
 }
 
-.pHead {
-	padding: 0;
-	margin: 0;
-	font-size: 16px;
-	font-weight: 500;
+.textImage {
+	position: absolute;
+	width: 1366px;
+	left: 0;
+	top: 0;
+	height: 955.47px;
+	background: rgba(0, 0, 0, 0.4);
 }
 
-.pDesc {
-	font-size: 14px;
-	font-weight: 300;
-    padding: 0;
-    font-weight: normal;
-	margin: 0;
+.btnOrder{
+	background: #b99365;
+	color: white;
+	border: none;
+	outline: none;
 }
 
-.findHotel{
-    margin-top: -3.1rem;
-    border-bottom:1px solid #ccc ;
-    padding: 15px;
+.footer{
+	width: 100%;
+	height: 350px;
+	background: #f2f2f2;
+	padding:45px 0;
 }
 
-.btnHotel {
-	background: white;
-    color: rgb(65, 63, 63);
-    margin-left: 23%;
-    font-family: roboto;
-    font-size: 13px;
-    padding: .7rem 7rem;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-}
-
-.descLocation{
-    font-size: 11px;
-    padding: 0;
-    margin: 0;
-}
-
-.inputLocation{
-    border: none;
-}
-
-.dataInput input[type=text]{
-    width: 650px;
-    height: 20px;
-    outline: none;
-}
-
-.inputData{
-    margin-left: 23%;
-}
-
-.bordering{
-    position: absolute;
-    width: 1px;
-    height: 66px;
-    background: #ccc;
-    left: 60%;
-    top:48.2%;
-}
-
-.findBtn{
-    position: absolute;
-    left: 60%;
-    top: 49.75%;
-    padding: .45rem 6rem;
-    background: #ffcc00;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-}
-
-.headerLine{
-    width: 140px;
-    height: 2px;
-    background: #00aeff;
-}
-
-.topCity img:hover::after{
-    content: 'lala';
-    width: inherit;
-    height: inherit;
-    background: rgba(0, 0, 0, 0.9);
+.phone,.connect{
+	width: 300px;
+	height: 150px;
 }
