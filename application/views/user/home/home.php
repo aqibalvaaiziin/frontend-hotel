@@ -1,31 +1,3 @@
-<nav class="navbar navbar-expand-lg" style="z-index:1">
-  <a class="navbar-brand text-white" href="#" style="letter-spacing:4px;margin-top:-5px">Luxury </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Kamar</a>
-      </li>     
-    </ul>
-    <div class="form-inline my-2 my-lg-0">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="" class="nav-link">Cek Pesanan</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Masuk</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Daftar</a>
-          </li>
-        </ul>
-    </div>
-  </div>
-</nav>
-
 <img src="<?= base_url().'/assets/image/big_image_1.jpg' ?>" width="100%" alt="" style="position:absolute;top:0">
 <div class="textImage text-center">
   <div style="margin-top:25%">

@@ -2,17 +2,16 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class Home extends CI_Controller {
+    class Pesan extends CI_Controller {
     
         public function index()
         {
             $this->load->view('templateUser/header');
-            $this->load->view('user/home/home');
+            $this->load->view('user/pesan/pesan');
             $this->load->view('templateUser/footer');
         }
-    
     }
     
-    /* End of file Home.php */
+    /* End of file Pesan.php */
     
 ?>
