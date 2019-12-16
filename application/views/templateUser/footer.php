@@ -4,7 +4,7 @@
             <div class="phone d-flex flex-column justify-content-around text-center">
                 <p class="rubikLight text-muted font-weigth-bold" style="letter-spacing:3px">Phone Support</p>
                 <p>24/7 Hubungi Kami Sekarang.</p>
-                <p>+62888555954</p>
+                <p style="letter-spacing:1px">+62888555954</p>
             </div>
             <div class="connect d-flex flex-column justify-content-around text-center">
                 <p class="rubikLight text-muted font-weigth-bold" style="letter-spacing:3px">Ikuti Sosial Media Kami</p>

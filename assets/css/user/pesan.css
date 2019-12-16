@@ -1,34 +1,61 @@
-.headLine{
-    width:5rem;
-    height: 3px;
-    background: #b99365;
+.headLine {
+	width: 5rem;
+	height: 3px;
+	background: #b99365;
 }
 
-.formOrder{
-    width: 40%;
-    height: 400px;
+.formOrder {
+	width: 40%;
+	height: 400px;
 }
 
-.formOrder input[type=text]{
+.formOrder input[type=text] {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	outline: none;
+	transition: ease 0.5;
+	font-family: pdf;
+	font-weight: 200;
+}
+
+.formOrder input[type=text]:focus {
+	border: none;
+	width: 100%;
+	outline: none;
+	transition: ease 0.5;
+	border-bottom: 3px solid #b99365;
+}
+
+.dataRoom {
+	width: 55%;
+	height: 470px;
+}
+
+.btnChooseRoom {
     border: none;
+    margin-top: 15px;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    outline: none;
-    transition: ease 0.5;
+    text-align: left;
+    background: #fff;
     font-family: pdf;
+    outline: none;
     font-weight: 200;
 }
 
-.formOrder input[type=text]:focus{
-    border: none;
+.dropdown-menu{
     width: 100%;
     outline: none;
-    transition: ease 0.5;
-    border-bottom: 3px solid #b99365;
+    font-family: pdf;
+	font-weight: 200;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #b99365;
 }
 
-.dataRoom{
-    width:55%;
-    height:300px;
+.dropdown-menu p:hover{
     background: #b99365;
+    color: white;
 }

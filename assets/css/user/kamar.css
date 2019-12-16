@@ -3,6 +3,48 @@
 	width: 1366px;
 	left: 0;
 	top: 0;
-	height: 563.55px;
+	height: 500px;
 	background: rgba(0, 0, 0, 0.4);
+}
+
+.lineHeadBlack{
+	width: 50px;
+	height: 2px;
+	background: rgba(31, 30, 30,0.2);
+}
+
+.btnBio{
+	background: white;
+	border: 2px solid #b99365;	
+	color: #b99365;
+}
+
+.btnBio:hover{
+	background: #b99365;
+	color: white;
+	text-decoration: none;
+}
+
+.boxCard{
+	width: 349.98px;
+	height: 645px;
+	border: white;
+	background-color: white;
+}
+
+.par{
+	background-image: url("../../image/img_5.jpg");
+	min-height: 500px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -500px;
+}
+
+.blogPar{
+	width: 1366px;
+	height: 500px;
+	background: rgba(0, 0, 0,0.2);
+	text-align: center;
 }

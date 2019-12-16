@@ -8,49 +8,18 @@
 	</div>
 </div>
 
-<div class="container d-flex flex-wrap justify-content-around" style="margin-top:47%;margin-bottom:100px">
+<div class="container d-flex flex-wrap justify-content-around" style="margin-top:43%;margin-bottom:100px">
+	<?php foreach($koleksiKamar->data as $kamar): ?>
 	<div class="card" style="width: 22rem">
 		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
 		<div class="card-body">
-			<h5 class="card-title pdfLight mb-4" style="font-size:1.75rem;color:#B99365">Nama Kamar</h5>
-			<p class="card-text mb-3 rubikLight"> $. 321321 <span class="ml-5"> 1 <img
-						src="<?= base_url().'/assets/icons/ic-bed-grey.png' ?>" style="margin-top:-15px" alt=""></span>
+			<h5 class="card-title pdfLight mb-4" style="font-size:1.75rem;color:#B99365"><?= $kamar->tipe ?></h5>
+			<p class="card-text mb-3 rubikLight"> $. 321321 <span class="ml-5"> 1 &nbsp;<i class="fa fa-bed" aria-hidden="true"></i></span>
 			</p>
-			<p class="card-text mb-3 rubikLight"> Type : Reguler </p>
-			<a href="#" class="btn btn-primary">Pesan Sekarang</a>
+			<a href="#" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
 		</div>
 	</div>
-	<div class="card" style="width: 22rem">
-		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
-		<div class="card-body">
-			<h5 class="card-title pdfLight mb-4" style="font-size:1.75rem;color:#B99365">Nama Kamar</h5>
-			<p class="card-text mb-3 rubikLight"> $. 321321 <span class="ml-5"> 1 <img
-						src="<?= base_url().'/assets/icons/ic-bed-grey.png' ?>" style="margin-top:-15px" alt=""></span>
-			</p>
-			<p class="card-text mb-3 rubikLight"> Type : Reguler </p>
-			<a href="#" class="btn btn-primary">Pesan Sekarang</a>
-		</div>
-	</div>
-	<div class="card" style="width: 22rem">
-		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
-		<div class="card-body">
-			<h5 class="card-title pdfLight mb-4" style="font-size:1.75rem;color:#B99365">Nama Kamar</h5>
-			<p class="card-text mb-3 rubikLight"> $. 321321 <span class="ml-5"> 1 <img
-						src="<?= base_url().'/assets/icons/ic-bed-grey.png' ?>" style="margin-top:-15px" alt=""></span>
-			</p>
-			<p class="card-text mb-3 rubikLight"> Type : Reguler </p>
-			<a href="#" class="btn btn-primary">Pesan Sekarang</a>
-		</div>
-	</div>
-	<div class="card" style="width: 22rem">
-		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
-		<div class="card-body">
-			<h5 class="card-title pdfLight mb-4" style="font-size:1.75rem;color:#B99365">Nama Kamar</h5>
-			<p class="card-text mb-3 rubikLight"> $. 321321 <span class="ml-5"> 1 <img
-						src="<?= base_url().'/assets/icons/ic-bed-grey.png' ?>" style="margin-top:-15px" alt=""></span>
-			</p>
-			<p class="card-text mb-3 rubikLight"> Type : Reguler </p>
-			<a href="#" class="btn btn-primary">Pesan Sekarang</a>
-		</div>
-	</div>
+	<?php endforeach; ?>
 </div>
+
+

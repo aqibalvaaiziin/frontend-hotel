@@ -1,0 +1,16 @@
+.inputSearch input[type=text]{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-family: pdf;
+    outline: none;
+    font-size: 25;
+}
+.inputSearch input[type=text]:focus{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #b99365;
+    font-family: pdf;
+    outline: none;
+    font-size: 25;
+}
