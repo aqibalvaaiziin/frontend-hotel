@@ -21,8 +21,11 @@
             $this->load->view('templateUser/header');
             $this->load->view('user/kamar/kamar',$data);
             $this->load->view('templateUser/footer');
+            
         }
     
+        
+
     }
     
     /* End of file Kamar.php */

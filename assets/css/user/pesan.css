@@ -29,51 +29,50 @@
 
 .dataRoom {
 	width: 55%;
-	height: 565px;
-	margin-top: -6rem;
+	height: 575px;
 }
 
-.descFa{
+.descFa {
 	width: 500px;
 	margin-left: 20px;
 }
 
-.dataRoom .descFa span{
+.dataRoom .descFa span {
 	display: inline-block;
 	width: 100px;
-	height:40px;
+	height: 40px;
 	font-size: 12px;
 }
 
 .btnChooseRoom {
-    border: none;
-    margin-top: 15px;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    text-align: left;
-    background: #fff;
-    font-family: pdf;
-    outline: none;
-    font-weight: 200;
-}
-
-.dropdown-menu{
-    width: 100%;
-    outline: none;
-    font-family: pdf;
+	border: none;
+	margin-top: 15px;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	text-align: left;
+	background: #fff;
+	font-family: pdf;
+	outline: none;
 	font-weight: 200;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #b99365;
 }
 
-.dropdown-menu p:hover{
-    background: #b99365;
-    color: white;
+.dropdown-menu {
+	width: 100%;
+	outline: none;
+	font-family: pdf;
+	font-weight: 200;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #b99365;
 }
 
-.formOrder select{
+.dropdown-menu p:hover {
+	background: #b99365;
+	color: white;
+}
+
+.formOrder select {
 	width: 100%;
 	background: white;
 	border: none;
@@ -83,7 +82,46 @@
 	border-bottom: 1px solid #ccc;
 }
 
-.formOrder select option{
+.formOrder select option {
 	font-family: pdf;
 	font-weight: 200;
+}
+
+/* Removes the clear button from date inputs */
+.formOrder input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+.formOrder input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+.formOrder input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+.formOrder input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+	font-family: pdf;
+	font-weight: 200;
+	font-size: 18px;
+	border: none;
+    border-bottom:1px solid #ccc;
+    background:white;
+    padding:5px;
+    display: inline-block !important;
+	visibility: visible !important;
+	outline: none;
+}
+
+.formOrder input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }

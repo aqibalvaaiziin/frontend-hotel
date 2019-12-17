@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div class="container" style="margin-top:40%;margin-bottom:100px">
+<div class="container" style="margin-top:40%;margin-bottom:200px">
 	<h1 class="pdfMedium">Isi Data Pemesanan</h1>
 	<div class="headLine mb-5"></div>
 
@@ -21,14 +21,27 @@
 				<small class="rubikMedium text-muted">isi nama sesuai dengan KTP</small><br><br><br>
 				<input type="text" placeholder="No. Handphone Pemesan" name="noHp"><br><br><br>
 				<input type="text" placeholder="Alamat Email" name="email"><br><br><br>
-				<select class="text-muted" name="noKamar" id="noKamar">
+				<?php foreach($tipeKamar->data as $kamar) : ?>
+					<input type="hidden" name="total" value="<?= $kamar->harga ?>">
+				<?php endforeach;?>
+				<select class="text-muted" name="idKamar" id="idKamar">
 					<?php foreach($tipeKamar->data as $kamar) : ?>
-					<option value="<?= $kamar->no_kamar; ?>"><?= $kamar->no_kamar; ?></option>
+					<option value="<?= $kamar->id_kamar; ?>"><?= $kamar->no_kamar; ?></option>
 					<?php endforeach;?>
 				</select>
-				<br><br>
+				<br><br><br>
+				<div class="d-flex w-100 flex-row justify-content-between">
+					<div>
+						<label class="text-muted pdfLight" for="checkIn">Check In</label><br>
+						<input type="date" id="checkIn" name="checkIn">
+					</div>
+					<div>
+						<label class="text-muted pdfLight" for="checkOut">Check Out</label><br>
+						<input type="date" id="checkOut" name="checkOut">
+					</div>
+				</div><br><br>
 				<small class="rubikLight">Dengan mengklik tombol di bawah, Anda mengerti dan menyetujui <span
-						style="color:#b99365">Kebijakan Privasi</span> Luxury Hotel.</small><br><br>
+						style="color:#b99365">Kebijakan Privasi</span> Luxury Hotel.</small><br>
 				<button class="px-5 py-3 btnOrder mt-4 rounded">Pesan Sekarang</button>
 			</form>
 			<?php echo form_close() ?>
