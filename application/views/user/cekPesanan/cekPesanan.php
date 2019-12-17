@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="container" style="margin-top:40%;margin-bottom:100px">
+<div class="container" style="margin-top:38%;margin-bottom:100px">
     <h1 class="text-center mb-5 pdfMedium">Cek Pesanan</h1>
     <div class="d-flex flex-row justify-content-between">
         <div class="card inputSearch p-4" style="width:45%">

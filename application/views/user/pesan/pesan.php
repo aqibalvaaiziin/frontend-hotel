@@ -15,45 +15,53 @@
 	<div class="d-flex flex-row justify-content-between">
 
 		<div class="formOrder">
-
-			<form method="post">
-				<input type="text" placeholder="Nama Pemesan"><br>
+			<?php echo form_open_multipart('user/pesan/booking') ?>
+			<form action="" method="post" enctype="multipart/form-data">
+				<input type="text" placeholder="Nama Pemesan" name="namaPemesan"><br>
 				<small class="rubikMedium text-muted">isi nama sesuai dengan KTP</small><br><br><br>
-				<input type="text" placeholder="No. Handphone Pemesan"><br><br><br>
-				<input type="text" placeholder="Alamat Email"><br><br>
-				<div class="dropdown">
-					<button class="btnChooseRoom text-muted dropdown-toggle" type="button" id="dropdownMenuButton"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Pilih Nomor Kamar
-					</button>
-					<div class=" dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p>dasda</p>
-                        <p>dasda</p>
-                        <p>dasda</p>
-                    </div>
-				</div><br><br>
+				<input type="text" placeholder="No. Handphone Pemesan" name="noHp"><br><br><br>
+				<input type="text" placeholder="Alamat Email" name="email"><br><br><br>
+				<select class="text-muted" name="noKamar" id="noKamar">
+					<?php foreach($tipeKamar->data as $kamar) : ?>
+					<option value="<?= $kamar->no_kamar; ?>"><?= $kamar->no_kamar; ?></option>
+					<?php endforeach;?>
+				</select>
+				<br><br>
 				<small class="rubikLight">Dengan mengklik tombol di bawah, Anda mengerti dan menyetujui <span
 						style="color:#b99365">Kebijakan Privasi</span> Luxury Hotel.</small><br><br>
 				<button class="px-5 py-3 btnOrder mt-4 rounded">Pesan Sekarang</button>
 			</form>
+			<?php echo form_close() ?>
 
 		</div>
 
-		<div class="dataRoom card px-2 py-2 text-center">
-            <img src="<?= base_url().'/assets/image/img_5.jpg' ?>" widht="280px" height="250px" alt="">
-            <p class="mt-2  pdfLight" style="font-size:40px;color:#b99365;letter-spacing:3px">Kamar Reguler</p>
-			<p class="mt-1 pdfLight" style="font-size:30px;color:#b99365;letter-spacing:3px"> Rp. 300000 </p>
-			<hr></hr>
+		<div class="dataRoom card px-2 py-2">
+			<?php foreach(array_slice($tipeKamar->data,0,1) as $kamar) : ?>
+			<img src="<?= base_url().$kamar->gambar ?>" widht="280px" height="250px" alt="">
+			<p class="mt-2  pdfLight text-center" style="font-size:40px;color:#b99365;letter-spacing:3px">Kamar
+				<?= $kamar->tipe ;?></p>
+			<p class="mt-1 pdfLight text-center" style="font-size:20px;color:#b99365;letter-spacing:3px"> Rp.
+				<?= $kamar->harga ?> </p>
+			<p class="mt-1 pdfLight" style="font-size:15px"> <?= $kamar->deskripsi ?> </p>
+			<hr>
+			</hr>
 			<p class="d-flex w-100 flex-row justify-content-around">
 				<i class="fa fa-bed" aria-hidden="true" style="font-size:30px"></i>
 				<i class="fa fa-wifi" aria-hidden="true" style="font-size:30px"></i>
-				<i class="fa fa-bath" aria-hidden="true" style="font-size:30px"></i>
 				<i class="fas fa-hot-tub" style="font-size:30px"></i>
-				<i class="fas fa-wine-bottle" style="font-size:30px"></i>
 				<i class="fas fa-tv" style="font-size:30px"></i>
 				<i class="fas fa-pizza-slice" style="font-size:30px"></i>
-				
 			</p>
+			<hr>
+			</hr>
+			<p class="descFa d-flex w-100 flex-row justify-content-around">
+				<span class="ml-1"><?= $kamar->jml_ranjang ?> Ranjang</span>
+				<span class="" style="margin-left:36px">Free Wifi</span>
+				<span class="" style="margin-left:17px">Air Panas</span>
+				<span class="" style="margin-left:37px">TV</span>
+				<span class="mr-2">Sarapan Pagi</span>
+			</p>
+			<?php endforeach;?>
 		</div>
 
 	</div>
