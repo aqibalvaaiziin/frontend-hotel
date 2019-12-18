@@ -6,9 +6,9 @@
     
         public function index()
         {
-            $this->load->view('templateUser/header');
+            $this->load->view('user/templateUser/header');
             $this->load->view('user/info/info');
-            $this->load->view('templateUser/footer');
+            $this->load->view('user/templateUser/footer');
         }
     
     }

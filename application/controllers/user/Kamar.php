@@ -18,9 +18,9 @@
         public function index()
         {
             $data['koleksiKamar'] = json_decode($this->curl->simple_get($this->API));
-            $this->load->view('templateUser/header');
+            $this->load->view('user/templateUser/header');
             $this->load->view('user/kamar/kamar',$data);
-            $this->load->view('templateUser/footer');
+            $this->load->view('user/templateUser/footer');
             
         }
     

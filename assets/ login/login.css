@@ -1,0 +1,40 @@
+.formCenter{
+    margin-top: 38%;
+    margin-bottom: 6%;
+    margin-left: 9%;
+}
+
+
+.cardForm{
+    width: 1120px;
+    border-radius: 7px;
+    height: 250px;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.cardBody{
+    width: inherit;
+    height: 200px;
+}
+
+.btnLogin{
+    background: #b99365;
+    outline: none;
+    color:white;
+    border-radius: 5px;
+    border: none;
+    font-family: pdf;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cardBody input[type=text],.cardBody input[type=password]{
+    font-family: pdf;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-weight: 200;
+    font-size: 1rem;
+    margin-top: 20px;
+}

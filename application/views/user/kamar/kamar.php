@@ -16,7 +16,7 @@
 			<h5 class="card-title pdfLight mb-2" style="font-size:1.75rem;color:#B99365">Kamar <?= $kamar->tipe ?></h5>
 			<p class="card-text mb-2 rubikMedium"> 
 				Rp. <?= $kamar->harga; ?> 
-				<span class="ml-5"> 1 &nbsp;<i class="fa fa-bed" aria-hidden="true"></i></span>
+				<span class="ml-5"> <?= $kamar->jml_ranjang ?> &nbsp;<i class="fa fa-bed" aria-hidden="true"></i></span>
 			</p>
 			<p class="card-text mb-4 rubikLight"><?= $kamar->deskripsi ?></p>
 			<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>

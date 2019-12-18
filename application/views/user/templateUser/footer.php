@@ -6,6 +6,16 @@
                 <p>24/7 Hubungi Kami Sekarang.</p>
                 <p style="letter-spacing:1px">+62888555954</p>
             </div>
+            <div class="d-flex flex-row text-center" style="margin-top:120px">
+                <div>
+                    <img src="<?= base_url().'/assets/image/mobile-assets.png' ?>" width="188px" height="156.81px" alt="">
+                </div>    
+                <div class="d-flex flex-column">
+                    <p class="mt-1">Download Our App</p>
+                    <img class="mt-3" src="<?= base_url().'/assets/image/download_android.png' ?>" width="134.28px" height="40px" alt="">
+                    <img class="mt-2"src="<?= base_url().'/assets/image/download_ios.png' ?>" width="134.28px" height="40px" alt="">
+                </div>    
+            </div>
             <div class="connect d-flex flex-column justify-content-around text-center">
                 <p class="rubikLight text-muted font-weigth-bold" style="letter-spacing:3px">Ikuti Sosial Media Kami</p>
                 <p>Follow Sosial Media Kami</p>
@@ -14,9 +24,12 @@
                     <img src="<?= base_url().'/assets/icons/ic-ig-black.png' ?>" alt="">
                     <img src="<?= base_url().'/assets/icons/ic-twitter-black.png' ?>" alt="">
                 </p>
+                
             </div>
+        </div><hr style="margin-top:-0.7px"></hr>
+        <div class="copyright text-center"  style="margin-top:37px">
+            <p>© Copyright ©2019 All rights reserved</p>
         </div>
-        <div class="copyright text-center"  style="margin-top:50px">© Copyright ©2019 All rights reserved</div>
     </div>
 </div>
 

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?= base_url().'/assets/css/user/kamar.css' ?>">
 	<link rel="stylesheet" href="<?= base_url().'/assets/css/user/cek.css' ?>">
 	<link rel="stylesheet" href="<?= base_url().'/assets/css/user/pesan.css' ?>">
+	<link rel="stylesheet" href="<?= base_url().'/assets/ login/login.css' ?>">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -38,7 +39,7 @@
 						<a href="<?= base_url().'user/CekPesanan'?>" class="nav-link">Cek Pesanan</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?= base_url().'user/Login'?>" class="nav-link">Masuk</a>
+						<a href="<?= base_url().'Login'?>" class="nav-link">Masuk</a>
 					</li>
 					<li class="nav-item">
 						<a href="<?= base_url().'user/Register'?>" class="nav-link">Daftar</a>

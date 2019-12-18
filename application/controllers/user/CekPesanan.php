@@ -22,9 +22,9 @@
             // $params   = $_SERVER['QUERY_STRING'];
             $url = $this->API.'transaksi?id_transaksi'.$params;
             $data['transaksi'] = json_decode($this->curl->simple_get($url));
-            $this->load->view('templateUser/header');
+            $this->load->view('user/templateUser/header');
             $this->load->view('user/cekPesanan/cekPesanan',$data);
-            $this->load->view('templateUser/footer');
+            $this->load->view('user/templateUser/footer');
         }
 
         public function cekOrder(){

@@ -25,9 +25,9 @@
             $data['tipeKamar'] = json_decode($this->curl->simple_get($url));
             // $data['users'] = json_decode($this->curl->simple_get($API2));
             
-            $this->load->view('templateUser/header');
+            $this->load->view('user/templateUser/header');
             $this->load->view('user/pesan/pesan',$data);
-            $this->load->view('templateUser/footer');
+            $this->load->view('user/templateUser/footer');
         }
 
         public function booking(){
