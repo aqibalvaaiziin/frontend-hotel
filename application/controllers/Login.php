@@ -49,6 +49,8 @@
     }
         
     public function logout(){
+        $dataSes = array('idUser','username','role');
+        $this->session->unset_userdata($dataSes);
         $this->session->sess_destroy();
         redirect('user/home','refresh');
     }

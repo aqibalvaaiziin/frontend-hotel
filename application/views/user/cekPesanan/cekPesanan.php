@@ -11,7 +11,7 @@
 <div class="container" style="margin-top:38%;margin-bottom:100px">
 
     <h1 class="text-center mb-5 pdfMedium">Riwayat Pesanan</h1>
-    <?php if($this->session->userdata('idUser')) { ?>
+    <?php if($this->session->userdata('idUser') && !empty($dataTransaksi)) { ?>
         <?php foreach($dataTransaksi->data as $d):?>
             <div class="card inputSearch p-4 mb-2" style="width:100%;height:186px">
                 <p>Id Transaksi : <?= $d->id_transaksi ;?> </p>

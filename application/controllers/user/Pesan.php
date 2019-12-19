@@ -24,7 +24,7 @@
             $url = $this->API."kamar?".$params;
             $url2 = $this->API2.$this->session->userdata('idUser');
             $data['tipeKamar'] = json_decode($this->curl->simple_get($url));
-            $data['dataUser'] = json_decode($this->curl->simple_get($this->API2));
+            $data['dataUser'] = json_decode($this->curl->simple_get($url2));
             
             $this->load->view('user/templateUser/header');
             $this->load->view('user/pesan/pesan',$data);

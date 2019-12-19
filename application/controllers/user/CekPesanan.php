@@ -18,7 +18,8 @@
         public function index()
         {
             $currentURL = current_url();
-            $url = $this->API.'transaksi?id_user='.$this->session->userdata('idUser');
+            $url = $this->API.'transaksi/user?id_user='.$this->session->userdata('idUser');
+            
             $data['dataTransaksi'] = json_decode($this->curl->simple_get($url));
             $this->load->view('user/templateUser/header');
             $this->load->view('user/cekPesanan/cekPesanan',$data);
