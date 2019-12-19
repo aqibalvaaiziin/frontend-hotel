@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div class="container" style="margin-top:40%;margin-bottom:200px">
+<div class="container" style="margin-top:40%;margin-bottom:330px">
 	<h1 class="pdfMedium">Isi Data Pemesanan</h1>
 	<div class="headLine mb-5"></div>
 

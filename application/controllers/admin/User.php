@@ -54,10 +54,45 @@
         }
 
         public function edit(){
+            $params = array('id_user' =>  $this->uri->segment(4));
+            $url = $this->API."?id_user=".$params['id_user'];
+            $data['users'] = json_decode($this->curl->simple_get($url));
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/bar');
-            $this->load->view('admin/user/edit');
+            $this->load->view('admin/user/edit',$data);
             $this->load->view('admin/template/footer');
+        }
+
+        public function prosesPut(){
+            $data = array(
+                'id_user'       => $this->input->post('id_user'),
+                'nama'          => $this->input->post('nama'),
+                'email'         => $this->input->post('email'),
+                'no_telp'       => $this->input->post('no_telp'),
+                'username'      => $this->input->post('username'),
+                'password'      => $this->input->post('password'),
+                'role'          => $this->input->post('role')
+            );
+            $update =  $this->curl->simple_put($this->API, $data); 
+            if($update)
+            {
+                $this->session->set_flashdata('hasil','Update Data Berhasil');
+            }else
+            {
+                $this->session->set_flashdata('hasil','Update Data Gagal');
+            }
+            redirect('admin/user');
+        }
+
+        public function delete(){
+            $params = array('id_user' =>  $this->uri->segment(4));
+            $delete =  $this->curl->simple_delete($this->API, $params);
+            if ($delete) {
+                $this->session->set_flashdata('result', 'Hapus Data Menu Berhasil');
+            } else {
+                $this->session->set_flashdata('result', 'Hapus Data Menu Gagal');
+            }
+            redirect('admin/user');
         }
 
     

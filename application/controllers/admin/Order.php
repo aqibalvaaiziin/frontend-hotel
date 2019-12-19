@@ -27,44 +27,47 @@
         }
         
 
-        public function detail($id_tansaksi){
+        public function edit(){
+            $params = array('id_transaksi' =>  $this->uri->segment(4));
+            $url = $this->API."?id_transaksi=".$params['id_transaksi'];
+            $data['dataTransaksi'] = json_decode($this->curl->simple_get($url));
             $this->load->view('admin/template/header');
-            $this->load->view('admin/order/detail');
+            $this->load->view('admin/template/bar');
+            $this->load->view('admin/order/edit',$data);
             $this->load->view('admin/template/footer');
         }
 
-        public function edit($id_tansaksi){
-        $this->form_validation->set_rules('id_kamar', 'id_kamar', 'required');
-        $this->form_validation->set_rules('id_user', 'id_user', 'required');
-        $this->form_validation->set_rules('checkin', 'checkin', 'required');
-        $this->form_validation->set_rules('checkout', 'checkout', 'required');
-        $this->form_validation->set_rules('total', 'total', 'required');
-        if ($this->form_validation->run() == FALSE) {
-            # code...
-            $this->load->view('admin/template/header');
-            $this->load->view('admin/order/edit');
-            $this->load->view('admin/template/footer');
-        } else {
-            # code...
-            // $this->order_model->editData();
-            redirect('admin/order','refresh');
-        }
-        }
-
-        public function tambah(){
-        
-            if ($this->form_validation->run() == FALSE) {
-                # code...
-                $this->load->view('admin/template/header');
-                $this->load->view('admin/template/bar');
-                $this->load->view('admin/order/tambah');
-                $this->load->view('admin/template/footer');
-            } else {
-                # code...
-            //   $this->order_model->tambaData();
-                redirect('admin/order','refresh');
+        public function prosesPut(){
+            $data = array(
+                'id_transaksi'  => $this->input->post('id_transaksi'),
+                'id_kamar'       => $this->input->post('id_kamar'),
+                'id_user'       => $this->input->post('id_user'),
+                'checkin'          => $this->input->post('checkin'),
+                'checkout'         => $this->input->post('checkout'),
+                'total'       => $this->input->post('total'),
+            );
+            $update =  $this->curl->simple_put($this->API, $data); 
+            if($update)
+            {
+                $this->session->set_flashdata('hasil','Update Data Berhasil');
+            }else
+            {
+                $this->session->set_flashdata('hasil','Update Data Gagal');
             }
+            redirect('admin/order');
         }
+
+        public function delete(){
+            $params = array('id_transaksi' =>  $this->uri->segment(4));
+            $delete =  $this->curl->simple_delete($this->API, $params);
+            if ($delete) {
+                $this->session->set_flashdata('result', 'Hapus Data Menu Berhasil');
+            } else {
+                $this->session->set_flashdata('result', 'Hapus Data Menu Gagal');
+            }
+            redirect('admin/order');
+        }
+
     
     }
     

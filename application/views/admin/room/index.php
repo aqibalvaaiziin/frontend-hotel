@@ -25,7 +25,12 @@
             <td><?= $k->tipe ?></td>
             <td><?= $k->harga ?></td>
             <td><?= $k->status ?></td>
-            <td></td>
+            <td>
+              <a href="<?= base_url().'admin/room/edit/'.$k->id_kamar.'/'.$k->tipe; ?>" class="btn btn-warning"><i
+                  class="fa fa-edit" style="font-size:15px"></i></a>
+              <a href="<?= base_url().'admin/room/delete/'.$k->id_kamar ?> " class="btn btn-danger"
+                onclick="return confirm('Yakin Data Ini Akan Dihapus');"> <i class="fa fa-trash"></i></a>
+            </td>
           </tr>
           <?php endforeach; ?>
       </tbody>

@@ -27,7 +27,10 @@
             <td><?= $d->username ?></td>
             <td><?= $d->password ?></td>
             <td><?= $d->role ?></td>
-            <td></td>
+            <td>
+              <a href="<?= base_url().'admin/user/edit/'.$d->id_user; ?>" class="btn btn-warning"><i class="fa fa-edit" style="font-size:15px"></i></a>
+              <a href="<?= base_url().'admin/user/delete/'.$d->id_user; ?> "class="btn btn-danger" onclick="return confirm('Yakin Data Ini Akan Dihapus');"> <i class="fa fa-trash"></i></a>
+            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>
