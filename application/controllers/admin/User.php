@@ -37,6 +37,7 @@
             $data = array(
                 'nama' => $this->input->post('nama'),
                 'email' => $this->input->post('email'),
+                'no_telp' => $this->input->post('noTelp'),
                 'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
                 'role' => $this->input->post('role'),

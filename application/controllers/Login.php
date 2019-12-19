@@ -5,7 +5,7 @@
     public function __construct()
     {
         parent::__construct();
-        $this->API = "http://localhost/TugasBesarWeb/User";
+        $this->API = "http://localhost/hotel-webservice/api/user";
         $this->load->library('session');
         $this->load->library('curl');
         $this->load->helper('form');
@@ -20,60 +20,38 @@
         $this->load->view('user/templateUser/footer');
     }
 
-    public function post_process()
-    {
-            $data = array(
-                'nama'              => $this->input->post('nama'),
-                'username'          => $this->input->post('username'),
-                'password'          => $this->input->post('password'),
-                'level'          => $this->input->post('level'),
-                'status'          => $this->input->post('status'),
-                
-            );
-        $insert =  $this->curl->simple_post($this->API, $data);
-        if ($insert) {
-            $this->session->set_flashdata('result', 'Data login Berhasil Ditambahkan');
-        } else {
-            $this->session->set_flashdata('result', 'Data login Gagal Ditambahkan');
-        }
-        redirect('login');
-    }
 
     public function proses_login(){
         $url = $this->API."/login";
         $data = [
-            'email' => htmlspecialchars($this->input->post('email')),
+            'username' => htmlspecialchars($this->input->post('username')),
             'password' => htmlspecialchars($this->input->post('password')),
         ];
         $cek_login =  json_decode($this->curl->simple_post($url, $data));
-        
+
         if($cek_login){
-            foreach ($cek_login as $row) {
-            # code...
-            $this->session->set_userdata('username',$row->username);
-            $this->session->set_userdata('level',$row->level);
-            
+            foreach ($cek_login->data as $row) {
+                $this->session->set_userdata('idUser',$row->id_user);
+                $this->session->set_userdata('username',$row->username);
+                $this->session->set_userdata('role',$row->role);
             }
-            if ($this->session->userdata('level') == 'admin') {
-            # code...
-            redirect('Admin');
-            //home
+            if ($this->session->userdata('role') == 'Admin') {
+                redirect('admin/order');
             }
-            if($this->session->userdata('level') == 'user'){
-            redirect('HomeUser');
+
+            else if($this->session->userdata('role') == 'User'){
+                redirect('user/home');
             }
         }else{
             $this->session->set_flashdata('message', 'Password salah');
             redirect('login');
-            //redirect('login/index','refresh');
         }
-        }
+    }
         
-
-        public function logout(){
+    public function logout(){
         $this->session->sess_destroy();
-        redirect('login','refresh');
-        }
+        redirect('user/home','refresh');
+    }
     }
 
 ?>

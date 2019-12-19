@@ -17,10 +17,12 @@
 		<div class="formOrder">
 			<?php echo form_open_multipart('user/pesan/booking') ?>
 			<form action="" method="post" enctype="multipart/form-data">
-				<input type="text" placeholder="Nama Pemesan" name="namaPemesan"><br>
+			<?php foreach($dataUser->data as $d): ?>
+				<input type="text" placeholder="Nama Pemesan" name="namaPemesan" value="<?= $d->nama;?>"><br>
 				<small class="rubikMedium text-muted">isi nama sesuai dengan KTP</small><br><br><br>
-				<input type="text" placeholder="No. Handphone Pemesan" name="noHp"><br><br><br>
-				<input type="text" placeholder="Alamat Email" name="email"><br><br><br>
+				<input type="text" placeholder="No. Handphone Pemesan" name="noHp" value="<?= $d->no_telp;?>"><br><br><br>
+				<input type="text" placeholder="Alamat Email" name="email" value="<?= $d->email;?>"><br><br><br>
+			<?php endforeach;?>
 				<?php foreach($tipeKamar->data as $kamar) : ?>
 					<input type="hidden" name="total" value="<?= $kamar->harga ?>">
 				<?php endforeach;?>

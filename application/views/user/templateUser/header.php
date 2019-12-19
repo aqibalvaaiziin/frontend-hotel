@@ -35,15 +35,24 @@
 			</ul>
 			<div class="form-inline my-2 my-lg-0">
 				<ul class="navbar-nav">
+					<?php if($this->session->userdata('idUser')) {?>
 					<li class="nav-item">
 						<a href="<?= base_url().'user/CekPesanan'?>" class="nav-link">Cek Pesanan</a>
 					</li>
 					<li class="nav-item">
-						<a href="<?= base_url().'Login'?>" class="nav-link">Masuk</a>
+						<a href="<?= base_url().'login/logout'?>" class="nav-link">Log Out</a>
 					</li>
-					<li class="nav-item">
-						<a href="<?= base_url().'user/Register'?>" class="nav-link">Daftar</a>
+					<li>
+						<a href="" class="nav-link"><?= $this->session->userdata('username') ?></a>
 					</li>
+					<?php }else{ ?>
+						<li class="nav-item">
+							<a href="<?= base_url().'Login'?>" class="nav-link">Masuk</a>
+						</li>
+						<li class="nav-item">
+							<a href="<?= base_url().'user/Register'?>" class="nav-link">Daftar</a>
+						</li>
+						<?php }?>
 				</ul>
 			</div>
 		</div>

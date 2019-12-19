@@ -10,7 +10,7 @@
 
 <div class="container d-flex flex-wrap justify-content-around" style="margin-top:43%;margin-bottom:100px">
 	<?php foreach($koleksiKamar->data as $kamar): ?>
-	<div class="card" style="width: 22rem">
+	<div class="card mb-3" style="width: 22rem">
 		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
 		<div class="card-body">
 			<h5 class="card-title pdfLight mb-2" style="font-size:1.75rem;color:#B99365">Kamar <?= $kamar->tipe ?></h5>
@@ -18,8 +18,12 @@
 				Rp. <?= $kamar->harga; ?> 
 				<span class="ml-5"> <?= $kamar->jml_ranjang ?> &nbsp;<i class="fa fa-bed" aria-hidden="true"></i></span>
 			</p>
-			<p class="card-text mb-4 rubikLight"><?= $kamar->deskripsi ?></p>
-			<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
+			<p class="card-text mb-4 rubikLight" style="width:310px;height:144px"><?= $kamar->deskripsi ?></p>
+			<?php if($this->session->userdata('idUser')){ ?>
+				<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
+				<?php }else{ ?>
+					<a href="<?= base_url().'login' ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
+			<?php } ?>
 		</div>
 	</div>
 	<?php endforeach; ?>

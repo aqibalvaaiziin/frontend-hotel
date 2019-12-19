@@ -9,7 +9,10 @@
 </div>
 <div class="formCenter">
     <div class="cardForm">
-        <form action="" method="post">
+        <?php 
+        form_open('login/proses_login');
+        ?>
+        <form action="login/proses_login" method="post" role="form">
         <div class="cardBody container mt-2 d-flex flex-column justify-content-around">
                 <input type="text" placeholder="Username" name="username">
                 <input type="password" placeholder="Password" name="password">
@@ -17,5 +20,8 @@
                 <small class="smallSignUp text-muted">Apakah anda punya akun? <a href="">Dafar Disini</a></small>
             </div>
         </form>
+        <?php 
+        form_close();
+        ?>
     </div>
 </div>

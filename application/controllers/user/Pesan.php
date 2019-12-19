@@ -9,6 +9,7 @@
             parent::__construct();
             $this->load->library('curl');
             $this->API = "http://localhost/hotel-webservice/api/";
+            $this->API2 = "http://localhost/hotel-webservice/api/user/login?id_user=";
             $this->load->library('session');
             $this->load->library('curl');
             $this->load->helper('form');
@@ -21,9 +22,9 @@
             $currentURL = current_url();
             $params   = $_SERVER['QUERY_STRING'];
             $url = $this->API."kamar?".$params;
-            // $API3 = $this->API."user?".$params;
+            $url2 = $this->API2.$this->session->userdata('idUser');
             $data['tipeKamar'] = json_decode($this->curl->simple_get($url));
-            // $data['users'] = json_decode($this->curl->simple_get($API2));
+            $data['dataUser'] = json_decode($this->curl->simple_get($this->API2));
             
             $this->load->view('user/templateUser/header');
             $this->load->view('user/pesan/pesan',$data);
@@ -33,7 +34,7 @@
         public function booking(){
             $data = array(
                 'id_kamar' => $this->input->post('idKamar'),
-                'id_user' => 1,
+                'id_user' => $this->session->userdata('idUser'),
                 'checkin' => $this->input->post('checkIn'),
                 'checkout' => $this->input->post('checkOut'),
                 'total' => $this->input->post('total'),

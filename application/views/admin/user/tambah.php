@@ -17,6 +17,10 @@
               <input type="text" class="form-control" id="email" name="email">
             </div>
             <div class="form-group">
+              <label for="noTelp">No Telephone</label>
+              <input type="text" class="form-control" id="noTelp" name="noTelp">
+            </div>
+            <div class="form-group">
               <label for="username">Username</label>
               <input type="text" class="form-control" id="username" name="username">
             </div>
