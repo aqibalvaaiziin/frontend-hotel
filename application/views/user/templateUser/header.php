@@ -37,7 +37,7 @@
 				<ul class="navbar-nav">
 					<?php if($this->session->userdata('idUser')) {?>
 					<li class="nav-item">
-						<a href="<?= base_url().'user/CekPesanan'?>" class="nav-link">Cek Pesanan</a>
+						<a href="<?= base_url().'user/CekPesanan'?>" class="nav-link">Cek Transaksi</a>
 					</li>
 					<li class="nav-item">
 						<a href="<?= base_url().'login/logout'?>" class="nav-link">Log Out</a>
