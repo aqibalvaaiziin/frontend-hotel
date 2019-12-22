@@ -17,7 +17,7 @@
                 <input type="text" placeholder="Username" name="username">
                 <input type="password" placeholder="Password" name="password">
                 <button class="btnLogin py-2 mt-3">Log In</button>
-                <small class="smallSignUp text-muted">Apakah anda punya akun? <a href="">Dafar Disini</a></small>
+                <small class="smallSignUp text-muted">Apakah anda punya akun? <a href="<?= base_url().'register' ?>">Dafar Disini</a></small>
             </div>
         </form>
         <?php 

@@ -8,10 +8,23 @@
 	</div>
 </div>
 
-<div class="container d-flex flex-wrap justify-content-around" style="margin-top:43%;margin-bottom:100px">
+	<div class="container" style="margin-top:38%">
+		<select name="lokasi" id="lokasi" class="pdfLight locationList">
+				<option value="">Room Number</option>
+			<?php foreach($koleksiKamar->data as $kamar): ?>
+				<option value="<?= $kamar->lokasi ?>"><?= $kamar->lokasi ?></option>
+			<?php endforeach;?>
+		</select>
+	</div>
+
+<div class="container d-flex flex-wrap justify-content-around" style="margin-top:50px;margin-bottom:100px">
+
+
+	<h1 class="text-center align-middle" id="loading">Loading......</h1>
+
 	<?php foreach($koleksiKamar->data as $kamar): ?>
 	<div class="card mb-3" style="width: 22rem">
-		<img src="<?= base_url().'/assets/image/kamar1.jpg' ?>" alt="..." style="width: 350px;height:233px">
+		<img src="<?= base_url().$kamar->gambar ?>" alt="..." style="width:350px;height:233px">
 		<div class="card-body">
 			<h5 class="card-title pdfLight mb-2" style="font-size:1.75rem;color:#B99365">Kamar <?= $kamar->tipe ?></h5>
 			<p class="card-text mb-2 rubikMedium"> 
@@ -22,7 +35,7 @@
 			<?php if($this->session->userdata('idUser')){ ?>
 				<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
 				<?php }else{ ?>
-					<a href="<?= base_url().'login' ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
+					<a href="<?= base_url().'login' ?>" class="btnOrder px-4 py-2 rounded" onclick="return confirm('Anda perlu melakukan login,apakah anda ingin login ?');">Pesan Sekarang</a>
 			<?php } ?>
 		</div>
 	</div>

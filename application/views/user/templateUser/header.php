@@ -50,7 +50,7 @@
 							<a href="<?= base_url().'Login'?>" class="nav-link">Masuk</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= base_url().'user/Register'?>" class="nav-link">Daftar</a>
+							<a href="<?= base_url().'Register'?>" class="nav-link">Daftar</a>
 						</li>
 						<?php }?>
 				</ul>
