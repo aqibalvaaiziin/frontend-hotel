@@ -1,6 +1,6 @@
 .textImageCover {
 	position: absolute;
-	width: 1366px;
+	width: 100%;
 	left: 0;
 	top: 0;
 	height: 500px;
@@ -47,4 +47,30 @@
 	height: 500px;
 	background: rgba(0, 0, 0,0.2);
 	text-align: center;
+}
+
+.locationList{
+	background: white;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	font-weight: 200;
+	font-family: pdf;
+	font-size: 20px;
+	width: 90%;
+	color: rgb(122, 122, 120);
+	outline: none;
+}
+
+.btnLocation{
+	padding: 2px 30px;
+	background: white;
+	border: none;
+	font-weight: 200;
+	font-family: pdf;
+	outline: none;
+}
+
+.btnLocation:hover{
+	color:white;
+	background: #b99365;
 }

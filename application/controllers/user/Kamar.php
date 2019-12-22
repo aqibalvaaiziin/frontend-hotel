@@ -21,10 +21,18 @@
             $this->load->view('user/templateUser/header');
             $this->load->view('user/kamar/kamar',$data);
             $this->load->view('user/templateUser/footer');
-            
         }
     
-        
+        public function listKamarLokasi(){
+            $lokasi = $this->input->post('lokasi');
+            $params   = $_SERVER['QUERY_STRING'];
+            $url = $this->API."/lokasi?".$params;
+            $data['koleksiKamar'] = json_decode($this->curl->simple_get($this->API."/lokasi"));
+            $data['koleksiByLokasi'] = json_decode($this->curl->simple_get($url));
+            $this->load->view('user/templateUser/header');
+            $this->load->view('user/kamar/kamar',$data);
+            $this->load->view('user/templateUser/footer');
+        }
 
     }
     
