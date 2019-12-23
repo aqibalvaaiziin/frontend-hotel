@@ -47,7 +47,7 @@
 				</p>
 				<p class="card-text mb-4 rubikLight" style="width:310px;height:144px"><?= $kamar->deskripsi ?></p>
 				<?php if($this->session->userdata('idUser')){ ?>
-					<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
+					<a href="<?= base_url().'user/pesan?tipe='.$kamar->tipe."&lokasi=".$kamar->lokasi ?>" class="btnOrder px-4 py-2 rounded">Pesan Sekarang</a>
 					<?php }else{ ?>
 						<a href="<?= base_url().'login' ?>" class="btnOrder px-4 py-2 rounded" onclick="return confirm('Anda perlu melakukan login,apakah anda ingin login ?');">Pesan Sekarang</a>
 				<?php } ?>
