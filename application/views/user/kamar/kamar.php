@@ -34,10 +34,12 @@
 	<?php }else{ ?>
 
 	<div class="container d-flex flex-wrap justify-content-around" style="margin-top:50px;margin-bottom:100px">
+		
 		<?php foreach($koleksiByLokasi->data as $kamar): ?>
 		<div class="card mb-3" style="width: 22rem">
 			<img src="<?= base_url().$kamar->gambar ?>" alt="..." style="width:350px;height:233px">
 			<div class="card-body">
+				<p class="card-text mb-2 rubikMedium"><?= $kamar->lokasi ?></p>
 				<h5 class="card-title pdfLight mb-2" style="font-size:1.75rem;color:#B99365">Kamar <?= $kamar->tipe ?></h5>
 				<p class="card-text mb-2 rubikMedium"> 
 					Rp. <?= $kamar->harga; ?> 
